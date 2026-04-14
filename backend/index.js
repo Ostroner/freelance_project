@@ -12,6 +12,8 @@ import userRoutes from "./routes/userroutes.js";
 import jobRoutes from "./routes/jobroutes.js";
 import applicationRoutes from "./routes/applicationroutes.js";
 import { user, Job, Application, Roles } from "./tables/foreignkey.js";
+import rolesroutes from "./routes/rolesroutes.js";
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -25,6 +27,7 @@ app.use(express.json());
 app.use("/users", userRoutes);
 app.use("/jobs", jobRoutes);
 app.use("/applications", applicationRoutes);
+app.use("/roles", rolesroutes);
 
 if (existsSync(frontendDistDir)) {
     app.use("/app", express.static(frontendDistDir));
