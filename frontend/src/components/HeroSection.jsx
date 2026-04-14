@@ -9,19 +9,16 @@ export function HeroSection({ health, jobs, onRefresh }) {
     <section className="hero panel">
       <div className="hero__content">
         <p className="eyebrow">Overview</p>
-        <h2>Minimal interface for jobs, applicants, and accounts.</h2>
+        <h2>looking for jobs, applicants?</h2>
         <p className="hero__lead">
-          A quieter frontend on top of your existing backend. Publish work,
-          browse listings, and review applicants without extra visual noise.
+          an open source job board built with react, node, express, and postgres. designed to be a simple starting point for freelance marketplaces, staffing agencies, or anyone looking to connect talent with opportunity.
         </p>
 
         <div className="hero__actions">
           <button className="primary-button" onClick={() => onRefresh({ announce: true })} type="button">
             Refresh
           </button>
-          <a className="secondary-button" href="/health" rel="noreferrer" target="_blank">
-            Health
-          </a>
+          
         </div>
       </div>
 
@@ -36,12 +33,6 @@ export function HeroSection({ health, jobs, onRefresh }) {
           <span>Total budget</span>
           <strong>{formatCurrency(totalBudget)}</strong>
           <small>Across all jobs</small>
-        </article>
-
-        <article className="stat-card">
-          <span>API status</span>
-          <strong>{healthState}</strong>
-          <small className={`status status--${healthClass}`}>{healthState}</small>
         </article>
       </div>
     </section>

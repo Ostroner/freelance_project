@@ -85,23 +85,6 @@ export function OverviewPage({ health, jobs, jobsLoading, onRefresh, sessionUser
           )}
         </div>
       </section>
-
-      <section className="panel stack panel--accent">
-        <div className="section-heading">
-          <div>
-            <p className="eyebrow">Session</p>
-            <h3>{sessionUser ? "Signed in and ready" : "No active session yet"}</h3>
-            <p className="section-copy">
-              {sessionUser
-                ? `Current operator: ${sessionUser.name}. You can publish jobs and apply using this account.`
-                : "Login is still required for job publishing and job applications."}
-            </p>
-          </div>
-          <Link className="primary-button" to={sessionUser ? "/publish" : "/account"}>
-            {sessionUser ? "Publish" : "Account"}
-          </Link>
-        </div>
-      </section>
     </>
   );
 }
